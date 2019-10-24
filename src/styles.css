@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  src: url("../src/assets/fonts/proxima-nova/proxima-nova-semibold.ttf");
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  src: url("../src/assets/fonts/proxima-nova/proxima-nova-regular.woff");
+}

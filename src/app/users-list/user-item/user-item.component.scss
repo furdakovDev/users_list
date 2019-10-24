@@ -1,0 +1,22 @@
+.user-item {
+  border-top: 1px solid rgb(69, 69, 69);
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'ProximaNova-Regular', serif;
+  color: #fff;
+}
+
+.button-edit {
+  color: rgb(220, 188, 101);
+  padding: 0 4px;
+  font-family: 'ProximaNova-Semibold', serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &:hover {
+    color: rgb(255, 223, 108);
+    background: rgb(72, 72, 72);
+  }
+}

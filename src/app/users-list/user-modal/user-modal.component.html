@@ -1,0 +1,101 @@
+<div role="document" class="modal-dialog m-0">
+  <div class="modal-content modal-customized">
+    <div class="modal-header p-lg-3 border-0">
+      <h4 class="modal-title title">{{ title }}</h4>
+      <button
+        type="button"
+        class="close pt-2 cross"
+        aria-label="Close"
+        (click)="activeModal.dismiss()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body p-0 pb-4 border-top border-bottom border-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-xl-12">
+                  <label
+                    for="name"
+                    class="label-customized"
+                  >
+                    User Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control input-customized"
+                    formControlName="name"
+                  >
+                  <div
+                    *ngIf="submitted && !userForm.controls.name.valid"
+                    class="error-message"
+                  >
+                    Please enter the name
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12">
+                  <label for="email" class="label-customized">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control input-customized"
+                    formControlName="email">
+                  <div
+                    *ngIf="submitted && !userForm.controls.email.valid"
+                    class="error-message"
+                  >
+                    Incorrect email format
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12">
+                  <label
+                    for="city"
+                    class="label-customized"
+                  >
+                    City (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    id="city"
+                    class="form-control input-customized"
+                    formControlName="city"
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer border-0 pt-2 pr-3 pb-2 pl-0">
+      <app-button
+        *ngIf="!!userData"
+        class="mr-auto"
+        type="danger"
+        (click)="deleteUser()"
+      >
+        delete user
+      </app-button>
+      <app-button
+        type="secondary"
+        (click)="cancelModal()"
+      >
+        cancel
+      </app-button>
+      <app-button
+        (click)="onSubmit()"
+        type="primary"
+      >
+        save
+      </app-button>
+    </div>
+  </div>
+</div>

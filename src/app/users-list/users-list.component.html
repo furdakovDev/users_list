@@ -1,0 +1,45 @@
+<div class="layout">
+  <div class="users-list-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <app-button
+            (click)="openModal()"
+            type="primary"
+          >
+            create user
+          </app-button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row pt-lg-3">
+        <div class="col-xl-12">
+          <div class="users-list">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-11">
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        *ngFor="let column of columns"
+                        class="pl-0 col-xl-4 column-heading pb-lg-2 pt-lg-2"
+                      >
+                        {{ column }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-1"></div>
+              </div>
+            </div>
+            <app-user-item
+              *ngFor="let user of (users | async).users"
+              [userData]="user">
+            </app-user-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

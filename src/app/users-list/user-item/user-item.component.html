@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row text-white user-item pb-lg-2 pt-lg-2">
+    <div class="col-xl-11">
+      <div class="container">
+        <div class="row">
+          <div class="pl-0 col-xl-4">{{ userData.name }}</div>
+          <div class="pl-0 col-xl-4">{{ userData.email }}</div>
+          <div class="pl-0 col-xl-4">{{ userData.city }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-1 d-flex justify-content-end">
+      <app-button
+        (click)="editUser()"
+        type="edit"
+      >
+        edit
+      </app-button>
+    </div>
+  </div>
+</div>

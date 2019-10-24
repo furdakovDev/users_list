@@ -1,0 +1,28 @@
+.button {
+  font-family: 'ProximaNova-Semibold', serif;
+  font-size: 12px;
+  border-radius: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.primary {
+  background-color: rgb(220, 188, 101);
+  color: rgb(26, 26, 26);
+}
+
+.secondary {
+  background-color: transparent;
+  color: rgb(220, 188, 101);
+}
+
+.edit {
+  padding: 0 4px;
+  background-color: transparent;
+  color: rgb(220, 188, 101);
+}
+
+.danger {
+  color: rgb(233, 96, 88);
+  background-color: transparent;
+}
